@@ -50,7 +50,7 @@ RSpec.describe CampaignsController, type: :controller do
 
   describe "POST #create" do
     before(:each) do
-      @campaign_attributes = attributes_for(:campaign, user: @current_user)
+      @campaign_attributes = attributes_for(:campaign, user: @current_user, title: "Nova Campanha", description: 'Descreva sua campanha...')
       post :create, params: {campaign: @campaign_attributes}
     end
 
